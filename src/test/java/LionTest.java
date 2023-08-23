@@ -8,8 +8,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-
-
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
 
@@ -18,7 +16,6 @@ public class LionTest {
 
     @Test
     public void getKittensTest() throws Exception {
-
         Lion lion = new Lion("Самка", feline);
         int expectedResult = 1;
         Mockito.when(feline.getKittens()).thenReturn(expectedResult);
@@ -40,5 +37,4 @@ public class LionTest {
         Exception trowException = Assert.assertThrows(Exception.class,() -> new Lion("Не определен", feline));
         Assert.assertEquals(trowException.getMessage(), exceptionMessage);
     }
-
 }
